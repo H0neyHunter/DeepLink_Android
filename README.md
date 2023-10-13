@@ -6,15 +6,28 @@
 To enable deep linking in your Android app, add the following code to the `AndroidManifest.xml` file within the `Activity` launcher:
 
 ```xml
-<intent-filter android:autoVerify="true">
-    <action android:name="android.intent.action.VIEW"/>
-    <category android:name="android.intent.category.DEFAULT"/>
-    <category android:name="android.intent.category.BROWSABLE"/>
-    <data
-        android:host="usyssoft.com"
-        android:scheme="https"
-        android:pathPattern="/data.*"/>
-</intent-filter>
+<activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!--DeepLink-->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="*usyssoft.com"
+                    android:scheme="https"
+                    android:pathPattern="/data.*"/>
+            </intent-filter>
+            <!--//DeepLink-->
+
+        </activity>
 ```
 
 In your MainActivity, retrieve the field1 and field2 values from the deep link with the following code:
