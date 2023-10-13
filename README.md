@@ -6,7 +6,7 @@
 To enable deep linking in your Android app, add the following code to the `AndroidManifest.xml` file within the `Activity` launcher:
 
 ```xml
-<activity
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
