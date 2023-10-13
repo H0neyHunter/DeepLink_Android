@@ -51,7 +51,7 @@ Make sure to replace field1TextView and field2TextView with the actual TextView 
 
 
 
-If you want it to be directed to Google Play, change the Json content below and add it to your site. https://example.com/assetlinks.json  or  https://www.example.com/.well-known/assetlinks.json
+If you want it to be directed to Google Play, change the Json content below and add it to your site. Recommended: https://www.example.com/.well-known/assetlinks.json or https://example.com/assetlinks.json
 
 package_name : Application package name
 
