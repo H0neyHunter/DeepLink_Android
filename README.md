@@ -49,6 +49,38 @@ b.apply {
 
 Make sure to replace field1TextView and field2TextView with the actual TextView identifiers in your layout file.
 
+
+
+If you want it to be directed to Google Play, change the Json content below and add it to your site. https://example.com/assetlinks.json
+
+package_name : Application package name
+
+sha256_cert_fingerprints : When the application is published, you can take it from your 
+Play Console account -> Your Application -> Application signing -> Application signing key certificate -> SHA256 section and paste it to the relevant place, 
+or you can use the same path in the Play Console. At the bottom of the Your Application -> Application signing section, 
+the Digital Asset Links JSON file data is automatically given.
+
+
+```json
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.usyssoft.deeplink",
+      "sha256_cert_fingerprints": [
+        "DE:A8:5B:5B:86:EB:9A:76:7B:F9:71:77:55:8E:F6:D1:2A:E4:64:99:B7:A7:EB:A1:6C:52:6F:6C:D5:67:DE:59",
+        "07:72:9B:5C:8E:98:0E:94:7E:5E:39:B5:02:10:89:CA:7B:3D:8B:BB:7F:DE:E6:AA:88:B1:FF:1A:7F:17:8B:37"
+      ]
+    }
+  }
+]
+
+```
+
+
 - 📫 How to reach me **usysstr@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
